@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+div:focus,
+button:focus,
+.btn:focus,
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/*____ Header */
+
+.mainNav {
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.mainNav .container {
+    padding: 15px 0;
+}
+
+.mainNav a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #868686;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    height: auto;
+}
+
+.mainNav a:hover {
+    transition: all 300ms;
+    opacity: 0.7;
+}
+
+.navTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navTitle h1 {
+    position: absolute;
+    font-size: 12px;
+    color: transparent;
+}
+
+.navTitle img {
+    width: 104px;
+    height: auto;
+}
+
+
+/*Tabs Section*/
+
+.navSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navSection a {
+    margin-right: 85px;
+}
+
+.navSection a:last-of-type {
+    margin-right: 0;
+}
+
+.navSection a:hover {
+    transition: all 300ms;
+    filter: grayscale(1) brightness(1.5);
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tabs label {
+    position: relative;
+    font-weight: normal;
+    letter-spacing: normal;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    filter: grayscale(1) brightness(1.5);
+}
+
+.tabs input {
+    display: none;
+    cursor: pointer;
+}
+
+.tabs input:checked+label {
+    /*filter: grayscale(0) brightness(1);*/
+    filter: grayscale(0) brightness(1) contrast(1);
+}
+
+
+/* fim Tabs Section*/
+
+.navBuy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBuy .buyCart img {
+    width: 33px;
+    height: auto;
+}
+
+.navBuy .buyLogin {
+    display: flex;
+    align-items: baseline;
+}
+
+.navBuy .buyLogin img {
+    width: 11.8px;
+    height: auto;
+    margin: 0 5px 0 0;
+}
+
+
+/* CARRINHO CHEIO e VAZIO */
+
+.buyCart {
+    position: relative;
+}
+
+.buyCart .badge {
+    background-color: #366AAA;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 13px;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -0.3rem;
+    top: -0.4rem;
+    border-radius: 100%;
+}
+
+.buyCart .empty {
+    background-color: #fff;
+    border: 1px solid #868686;
+    color: #3A7A21;
+    font-weight: normal;
+}
+
+
+/* Mobile NavBar */
+
+.mobileNav,
+.footerNav {
+    /*position: absolute;*/
+    padding: 24px 20px 15px;
+    width: 100%;
+    display: none;
+}
+
+.hamburguer {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: none;
+    margin: 0 0 10px 0;
+    right: 5.3rem;
+}
+
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span,
+.hamburguer label {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #868686;
+    left: 0;
+    position: absolute;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    border-radius: 10px;
+}
+
+.hamburguer:before {
+    top: 0;
+}
+
+.hamburguer:after {
+    bottom: 0;
+}
+
+.hamburguer:focus {
+    outline: none;
+}
+
+.hamburguer label {
+    width: 100%;
+    height: 100%;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+    margin: 0 0 1.5rem 0;
+}
+
+.hamburguer span {
+    top: 8px;
+}
+
+#change-hamburguer {
+    display: none;
+}
+
+#change-hamburguer:checked~.hamburguer:before,
+#change-hamburguer:checked~.hamburguer:after {
+    top: 10px;
+    margin-top: -10%;
+    border-radius: 10px;
+}
+
+#change-hamburguer:checked~.hamburguer:before {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+#change-hamburguer:checked~.hamburguer:after {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 10px;
+}
+
+#change-hamburguer:checked~.hamburguer span {
+    opacity: 0;
+}
+
+#change-hamburguer:checked~.menu {
+    max-height: 200px;
+}
+
+.menu {
+    max-height: 0;
+    height: auto;
+    background: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #868686;
+    font-size: 16px;
+    padding: 13px;
+    display: block;
+    border-bottom: 1px solid #CBCBCB;
+}
+
+.menu a:last-of-type {
+    border: none;
+}
+
+
+/* Fim Mobile NavBar */
+
+
+/*____ Fim Header */
+
+
+/*____ Banner */
+
+.banner {
+    padding: 170px 0 0 0;
+    background-image: url('../img/bg_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    background-color: #D6D6D6;
+    width: 100%;
+    height: auto;
+}
+
+.banner h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    padding: 0 19rem 170px 0;
+    margin: 0;
+}
+
+.banner h1 strong {
+    color: #2A5283;
+    font-weight: bold;
+}
+
+
+/*____ Fim Banner */
+
+
+/*____ Barra de Pesquisa */
+
+.searchBar {
+    margin: -6.8rem 0 0 0;
+}
+
+.searchBar .col {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.searchBar .searchInput {
+    background-color: #FFFFFF;
+    border-top: 1px solid #D6D6D6;
+    border-left: 1px solid #D6D6D6;
+    border-bottom: 2px solid #D6D6D6;
+    color: #D6D6D6;
+    padding: 30px 40px;
+    font-weight: lighter;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.searchBar .inputTitle {
+    padding: 0 0 0 5px;
+}
+
+.searchBar .searchInput #city {
+    color: #366AAA;
+}
+
+.searchBar .searchInput img {
+    height: 45px;
+    width: 45px;
+    padding: 0;
+}
+
+.searchBar .searchInput h6 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.searchBar select {
+    -webkit-appearance: none;
+    border: none;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    width: 100%;
+}
+
+.searchBar .btn {
+    background-color: #2A5283;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+}
+
+
+/*____ Fim Barra de Pesquisa */
+
+
+/*____ Loja */
+
+.store {
+    padding: 70px 0;
+}
+
+.store .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.store .mainTitle {
+    color: #868686;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0 0 70px 0;
+    font-size: 45px;
+}
+
+.store .mainTitle strong {
+    color: #000000;
+    font-weight: normal;
+}
+
+.store .row {
+    margin: 0 0 70px 0;
+}
+
+.store .row:last-of-type {
+    margin: 0;
+}
+
+.store .productList {
+    padding: 0;
+}
+
+.store .productBox {
+    text-decoration: none;
+}
+
+.store .productBox:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.store .productImage {
+    width: 100%;
+    height: auto;
+}
+
+.store .productDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 70px 0;
+}
+
+.store .productDetails .productType {
+    text-transform: uppercase;
+    color: #868686;
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.store .productDetails .productPrice {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+/*____ Fim Loja */
+
+
+/*____ Detalhes da Compra */
+
+.details {
+    padding: 44px 0 81px;
+}
+
+.btn-back {
+    margin: 0 0 0 -0.9rem;
+    padding: 0;
+}
+
+.btn-back-success {
+    display: flex;
+    margin: 0 0 0 -12.5em;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.details .detailsArea {
+    padding: 0 0 0 45px;
+}
+
+.details .detailsTitle {
+    color: #000000;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.details .detailsCarousel {
+    padding: 30px 0 0 0;
+}
+
+.details .carousel-indicators li {
+    width: 9px;
+    height: 9px;
+    background-color: #000000;
+    border-radius: 100%;
+}
+
+.details .carousel-indicators .active {
+    background-color: transparent;
+    border: 1px solid #000000;
+}
+
+.details .more {
+    color: #868686;
+    font-size: 20px;
+    font-weight: 25px;
+    margin: 0 0 26px 0;
+}
+
+.details .morecontent span {
+    display: none;
+}
+
+.details .morelink {
+    color: #366AAA;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.details .detailsInput {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D6D6D6;
+    color: #868686;
+    padding: 24px 0;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.detailsInput .detailsImg {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.detailsInput .detailsImg img {
+    width: 53.77px !important;
+    height: 53.77px !important;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.detailsInput h6 {
+    margin: 0 0 12px 0;
+}
+
+.detailsInput p {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #000000;
+    margin: 0;
+}
+
+.detailsInput .detailsSection {
+    padding: 0 0 0 20px;
+}
+
+.details .sizesBox:first-of-type,
+.details .sizesBox:last-of-type {
+    padding: 0;
+}
+
+.details .detailsSizes {
+    margin: 30px 0;
+}
+
+.details .detailsGifts {
+    margin: 30px 0;
+}
+
+.details input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+
+.details label {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 160px;
+    background-color: #fff;
+    border: 1px solid #CBCBCB;
+    transition: all 500ms ease;
+    margin: 0 auto;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details input[type="radio"]:checked+label {
+    border: 3px solid #2D65AF;
+}
+
+.details .sizesImg img {
+    width: 100%;
+    height: auto;
+}
+
+.details h5 {
+    color: #868686;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+}
+
+.details .detailPrice {
+    margin: 10px 0 20px 0;
+    color: #000;
+}
+
+.details .detailsSubmit .btn {
+    background-color: #213A56;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 40px;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.details .detailsSubmit p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/*____ Fim Detalhes da Compra */
+
+
+/*____ Login */
+
+.login .container {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0 12rem;
+}
+
+.login .title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.login input {
+    background-color: #EBEBEB;
+    color: #868686;
+    font-size: 23px;
+    border: none;
+    padding: 15px 0 15px 39px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.login button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 23px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.login .forgot {
+    text-align: left;
+    color: #868686;
+    margin: 15px 0 0 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.login .forgot a {
+    color: #366AAA;
+    text-decoration: underline;
+}
+
+
+/*____ Fim Login */
+
+
+/*____ Pagamento */
+
+
+/*____ Fim Pagamento */
+
+
+/*____ Sobre */
+
+.about .container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 0 5rem;
+    flex-direction: column;
+}
+
+.about .title {
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+.about .message {
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+    color: #868686;
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+
+/*____ Fim Sobre */
+
+
+/*____ Sucesso */
+
+.success {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.success .title {
+    text-transform: uppercase;
+    color: #366AAA;
+    font-size: 74px;
+    margin: 0 0 45px 0;
+}
+
+.success .successMessage {
+    border-top: 1px solid #2D65AF;
+    padding: 45px 0 10rem 0;
+    font-size: 53px;
+    line-height: 66px;
+    color: #868686;
+}
+
+
+/*____ Fim Sucesso */
+
+
+/*____ Footer */
+
+.mainFooter .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 62px 0 33px 0;
+}
+
+.mainFooter img {
+    margin-bottom: 37px;
+}
+
+.mainFooter p {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 33px 0 0 0;
+    border-top: 1px solid #D6D6D6;
+    width: 100%;
+    text-align: center;
+    color: #366AAA;
+    font-size: 20px;
+}
+
+.footerMargin {
+    display: none;
+}
+
+
+/*____ Fim Footer */
+
+
+/*____ Media Queries */
+
+@media (max-width: 991.98px) {
+    .navSection a {
+        margin-right: 40px;
+    }
+    .navSection a:hover {
+        filter: none;
+    }
+    .banner {
+        padding: 90px 0 0 0;
+        background-position: -2rem center;
+    }
+    .banner h1 {
+        padding: 0 19rem 130px 0;
+        font-size: 22px;
+    }
+    .searchBar {
+        margin: -4.9rem 0 0 0;
+    }
+    .searchBar .searchInput {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .searchBar .searchInput h6,
+    .searchBar select {
+        font-size: 14px;
+    }
+    .searchBar .searchInput img {
+        height: 45px;
+        width: 45px;
+        padding: 0 5px 10px;
+    }
+    .searchBar .inputTitle {
+        padding: 0;
+    }
+    .searchBar .btn {
+        background-color: #2A5283;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+    }
+    .store {
+        padding: 30px 0;
+    }
+    .store .row {
+        margin: 0 0 25px 0;
+    }
+    .store .mainTitle {
+        font-size: 20px;
+        margin: 0 0 20px 0;
+    }
+    .store .productDetails .productType,
+    .store .productDetails .productPrice {
+        font-size: 15px;
+    }
+    .mainFooter .container {
+        padding: 32px 0 30px 0;
+    }
+    .mainFooter p {
+        padding: 20px 0 0 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mainNav {
+        display: none;
+    }
+    .mobileNav {
+        display: flex;
+        border-bottom: 1px solid #D6D6D6;
+    }
+    .footerNav {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        z-index: 9;
+        background-color: #FFFFFF !important;
+        -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+    .buyCart {
+        margin-right: 0;
+        position: absolute;
+        right: 1.6rem;
+        top: 1.2rem;
+    }
+    .buyCart .badge {
+        top: -0.1rem;
+    }
+    .buyCart img {
+        width: 22.03px;
+        height: auto;
+    }
+    .banner {
+        padding: 64px 0 0 0;
+        background-position: right center;
+        background-image: url('../img/bg_banner_mobile.jpg');
+    }
+    .banner h1 {
+        padding: 0 9rem 70px 0;
+    }
+    .searchBar {
+        margin: -0.8rem 0 0 0;
+    }
+    .searchBar .btn {
+        margin-top: 5px;
+    }
+    .searchBar .searchInput {
+        border: 1px solid #EBEBEB;
+        margin: 0 0 10px 0;
+        -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    }
+    .searchBar .searchInput h6,
+    .searchBar select {
+        font-size: 18px;
+    }
+    .searchBar .searchInput .inputTitle .col-sm-9 {
+        width: 75% !important;
+    }
+    .searchBar .searchInput .inputTitle .col-sm-3 {
+        width: 25% !important;
+    }
+    .store .mainTitle {
+        margin: 0 15px 20px 15px;
+        text-align: left;
+    }
+    .store .row,
+    .store .row:last-of-type {
+        margin: 0 10px;
+    }
+    a.col-sm-4.productBox {
+        width: 50%;
+        padding: 0 5px 0;
+    }
+    .store .productDetails {
+        margin: 10px 0 30px 0;
+        flex-wrap: wrap;
+    }
+    .store .productDetails .productType,
+    .store .productDetails .productPrice {
+        width: 100%;
+    }
+    .mainFooter {
+        margin: 0 20px;
+    }
+    .mainFooter .container {
+        padding: 32px 0 22px 0;
+    }
+    .mainFooter img {
+        margin-bottom: 22px;
+    }
+    .mainFooter p {
+        padding: 20px 1.5rem 0;
+        font-size: 12px;
+    }
+    .footerMargin {
+        display: block;
+        margin: 0 0 4rem 0;
+        height: 10px;
+        width: 100%;
+        background-color: transparent;
+    }
+    .login .container {
+        padding: 5rem 0 10rem;
+    }
+    .login .title {
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
+    .login input {
+        font-size: 14px;
+        padding: 14px 0 14px 26px;
+        margin-bottom: 10px;
+    }
+    .login button {
+        font-size: 14px;
+        padding: 10.6px 0;
+    }
+    .login .forgot {
+        font-size: 12px;
+    }
+    .about .container {
+        padding: 3.13rem 0 8rem;
+    }
+    .about .title {
+        font-size: 28px;
+        margin: 0;
+    }
+    .about .message {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 32px 0 0 0;
+    }
+    .success .title {
+        font-size: 28px;
+        margin: 4rem 0 12px 0;
+    }
+    .success .successMessage {
+        padding: 12px 0 5rem 0;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .btn-back-success {
+        margin: 0 0 0 -1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {}
