@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="/assets/img/favicon.png">
 
-    <title>BOUQS | Sobre nós</title>
+    <title>BOUQS | Dados da Entrega</title>
 </head>
 
 <body>
@@ -26,16 +26,16 @@
                     </a>
                 </div>
 
-                <div class="tabs navSection col-sm-6" id="mobileNavSection" style="visibility: hidden;">
+                <div class="tabs navSection col-sm-6">
                     <a href="#" class="sections">
-                        <input type="radio" id="tab1" name="tab" checked="checked">
+                        <input type="radio" id="tab1" name="tab">
                         <label for="tab1">
                             <img src="assets/img/flower.svg" alt="Loja">
                         </label>
                     </a>
 
                     <a href="#" class="sections">
-                        <input type="radio" id="tab2" name="tab">
+                        <input type="radio" id="tab2" name="tab" checked="checked">
                         <label for="tab2">
                             <img src="assets/img/personal_data.svg" alt="Entrega">
                         </label>
@@ -84,29 +84,76 @@
         </div>
     </nav>
 
-    <section class="about">
+    <nav class="footerNav">
         <div class="container">
-            <div class="col-sm-8 no-padding">
-                <h1 class="title">Sobre a Bouqs</h1>
+            <div class="row">
+                <div class="tabs navSection col-sm-6">
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot1" name="footerTab">
+                        <label for="foot1">
+                        <img src="assets/img/flower.svg" alt="Loja">
+                    </label>
+                    </a>
 
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot2" name="footerTab">
+                        <label for="foot2">
+                        <img src="assets/img/personal_data.svg" alt="Entrega">
+                    </label>
+                    </a>
 
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
-
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot3" name="footerTab" checked="checked">
+                        <label for="foot3">
+                        <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
+                    </label>
+                    </a>
+                </div>
             </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="btn-back"><img src="assets/img/arrow_back.svg" alt="Voltar"></a>
+
+    <section class="details">
+        <div class="container">
+
+            <section class="delivery">
+                <form action="#">
+                    <div class="row form-group">
+                        <div class="col-sm-7 formData no-padding">
+                            <h1>Quem vai Receber</h1>
+
+                            <div class="col-sm-12 no-padding formRow tabs-recipient">
+                                <input type="radio" id="rec1" name="recipientName" checked="checked">
+                                <label for="rec1">
+                                    Gabriela Simões
+                                    <button class="addRecipient"></button>
+                                </label>
+                            </div>
+
+                            <div class="col-sm-12 no-padding tabs-recipient">
+                                <input type="radio" id="rec2" name="recipientName">
+                                <label for="rec2">
+                                    Roberta Rosseto
+                                    <button class="addRecipient"></button>
+                                </label>
+                            </div>
+
+                            <div class="row col-sm-12 no-padding newRecipient">
+                                <div class="col-sm-6 no-padding">
+                                    <h2>Novo presenteado:</h2>
+                                </div>
+
+                                <div class="col-sm-6 no-padding">
+                                    <button type="submit" class="btn btn-black">Inserir novo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
         </div>
     </section>
 
@@ -119,10 +166,18 @@
         </div>
     </footer>
 
+    <div class="footerMargin">&nbsp;</div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/js/read_more.js"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="/assets/img/favicon.png">
 
-    <title>BOUQS | Sobre nós</title>
+    <title>BOUQS | Fale conosco</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 
                 <div class="tabs navSection col-sm-6" id="mobileNavSection" style="visibility: hidden;">
                     <a href="#" class="sections">
-                        <input type="radio" id="tab1" name="tab" checked="checked">
+                        <input type="radio" id="tab1" name="tab">
                         <label for="tab1">
                             <img src="assets/img/flower.svg" alt="Loja">
                         </label>
@@ -42,7 +42,7 @@
                     </a>
 
                     <a href="#" class="sections">
-                        <input type="radio" id="tab3" name="tab">
+                        <input type="radio" id="tab3" name="tab" checked="checked">
                         <label for="tab3">
                             <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
                         </label>
@@ -84,29 +84,36 @@
         </div>
     </nav>
 
-    <section class="about">
+    <section class="details">
         <div class="container">
-            <div class="col-sm-8 no-padding">
-                <h1 class="title">Sobre a Bouqs</h1>
 
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
+            <section class="contact">
+                <form action="#">
+                    <div class="row form-group">
+                        <div class="col-sm-5 formData no-padding">
+                            <h1>Contato</h1>
+                            <h2>Entre em contato conosco.</h2>
 
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
+                            <div class="col-sm-12 no-padding formRow">
+                                <input type="text" name="recipientName" id="nameInp" placeholder="Nome">
+                                <small class="formValidation">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
 
-                <p class="message">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum sint vel, magnam necessitatibus, provident modi at exercitationem id doloribus sed voluptate illo, aperiam tenetur! Sit quisquam dignissimos dolor velit neque.Ducimus tempora optio adipisci
-                    obcaecati enim provident architecto cupiditate eos fuga non ex dolorum dolores, ipsa nulla, blanditiis nobis accusantium facilis natus molestiae, possimus ipsam incidunt facere eius. Reprehenderit, labore. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit.
-                </p>
-            </div>
+                            <div class="col-sm-12 no-padding formRow">
+                                <input type="email" name="email" id="emailInp" placeholder="E-mail">
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-black">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
         </div>
     </section>
 
@@ -123,6 +130,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/js/read_more.js"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>

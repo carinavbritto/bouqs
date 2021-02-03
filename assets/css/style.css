@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
 body {
     font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
 }
 
 div:focus,
 button:focus,
 .btn:focus,
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
     outline: none;
     box-shadow: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 
@@ -278,11 +296,16 @@ select:focus {
     font-size: 16px;
     padding: 13px;
     display: block;
-    border-bottom: 1px solid #CBCBCB;
+    border-bottom: 1px solid rgba(203, 203, 203, 0.4);
+}
+
+.menu a:first-of-type {
+    padding: 40px 13px 13px;
 }
 
 .menu a:last-of-type {
     border: none;
+    padding: 13px 13px 11px;
 }
 
 
@@ -371,6 +394,7 @@ select:focus {
     border: none;
     font-size: 18px;
     color: #000000;
+    background-color: #FFFFFF !important;
     cursor: pointer;
     width: 100%;
 }
@@ -466,187 +490,6 @@ select:focus {
 /*____ Fim Loja */
 
 
-/*____ Detalhes da Compra */
-
-.details {
-    padding: 44px 0 81px;
-}
-
-.btn-back {
-    margin: 0 0 0 -0.9rem;
-    padding: 0;
-}
-
-.btn-back-success {
-    display: flex;
-    margin: 0 0 0 -12.5em;
-    padding: 0;
-    justify-content: flex-start;
-}
-
-.details .detailsArea {
-    padding: 0 0 0 45px;
-}
-
-.details .detailsTitle {
-    color: #000000;
-    font-size: 45px;
-    font-weight: bold;
-}
-
-.details .detailsCarousel {
-    padding: 30px 0 0 0;
-}
-
-.details .carousel-indicators li {
-    width: 9px;
-    height: 9px;
-    background-color: #000000;
-    border-radius: 100%;
-}
-
-.details .carousel-indicators .active {
-    background-color: transparent;
-    border: 1px solid #000000;
-}
-
-.details .more {
-    color: #868686;
-    font-size: 20px;
-    font-weight: 25px;
-    margin: 0 0 26px 0;
-}
-
-.details .morecontent span {
-    display: none;
-}
-
-.details .morelink {
-    color: #366AAA;
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.details .detailsInput {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #D6D6D6;
-    color: #868686;
-    padding: 24px 0;
-    font-size: 18px;
-    font-weight: lighter;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.detailsInput .detailsImg {
-    padding: 0;
-    margin: 0 auto;
-}
-
-.detailsInput .detailsImg img {
-    width: 53.77px !important;
-    height: 53.77px !important;
-    padding: 0;
-    margin: 0.5rem 0 0 0;
-}
-
-.detailsInput h6 {
-    margin: 0 0 12px 0;
-}
-
-.detailsInput p {
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: lighter;
-    color: #000000;
-    margin: 0;
-}
-
-.detailsInput .detailsSection {
-    padding: 0 0 0 20px;
-}
-
-.details .sizesBox:first-of-type,
-.details .sizesBox:last-of-type {
-    padding: 0;
-}
-
-.details .detailsSizes {
-    margin: 30px 0;
-}
-
-.details .detailsGifts {
-    margin: 30px 0;
-}
-
-.details input[type="radio"] {
-    display: none;
-    cursor: pointer;
-}
-
-.details label {
-    position: relative;
-    cursor: pointer;
-    width: 100%;
-    height: 160px;
-    background-color: #fff;
-    border: 1px solid #CBCBCB;
-    transition: all 500ms ease;
-    margin: 0 auto;
-    padding: 40px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.details input[type="radio"]:checked+label {
-    border: 3px solid #2D65AF;
-}
-
-.details .sizesImg img {
-    width: 100%;
-    height: auto;
-}
-
-.details h5 {
-    color: #868686;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 15px 0 0 0;
-}
-
-.details .detailPrice {
-    margin: 10px 0 20px 0;
-    color: #000;
-}
-
-.details .detailsSubmit .btn {
-    background-color: #213A56;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 0;
-    padding: 40px;
-    width: 100%;
-    margin: 0 0 15px 0;
-}
-
-.details .detailsSubmit p {
-    font-size: 16px;
-    margin: 0;
-}
-
-
-/*____ Fim Detalhes da Compra */
-
-
 /*____ Login */
 
 .login .container {
@@ -699,7 +542,511 @@ select:focus {
 /*____ Fim Login */
 
 
+/*____ Detalhes da Compra */
+
+.details {
+    padding: 44px 0 81px;
+}
+
+.btn-back {
+    margin: 0 0 0 -0.9rem;
+    padding: 0;
+}
+
+.btn-back-success {
+    display: flex;
+    margin: 0 0 0 -12.5em;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.details .detailsArea {
+    padding: 0 0 0 45px;
+}
+
+.details .detailsTitle {
+    color: #000000;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.details .detailsCarousel {
+    padding: 30px 0 0 0;
+}
+
+.details .carousel-indicators li {
+    width: 9px;
+    height: 9px;
+    background-color: #000000;
+    border-radius: 100%;
+}
+
+.details .carousel-indicators .active {
+    background-color: transparent;
+    border: 1px solid #000000;
+}
+
+.details .more {
+    color: #868686;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 0 26px 0;
+}
+
+.details .morecontent span {
+    display: none;
+}
+
+.details .morelink {
+    color: #366AAA;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.details .detailsInput {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D6D6D6;
+    color: #868686;
+    padding: 24px 0 24px 1rem;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.detailsInput .detailsImg {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.detailsInput .detailsImg img {
+    width: 53.77px !important;
+    height: 53.77px !important;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.detailsInput h6 {
+    margin: 0 0 12px 0;
+    color: #868686;
+    font-size: 18px;
+}
+
+.detailsInput p {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #000000;
+    margin: 0;
+}
+
+.detailsInput .p-blue {
+    color: #366AAA;
+}
+
+.detailsInput .detailsSection {
+    padding: 0 0 0 20px;
+}
+
+.details .sizesBox:first-of-type,
+.details .sizesBox:last-of-type {
+    padding: 0;
+}
+
+.details .detailsSizes {
+    margin: 30px 0;
+}
+
+.details .detailsGifts {
+    margin: 30px 0;
+}
+
+.details .tabs-details input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+
+.details .tabs-details label {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 160px;
+    background-color: #fff;
+    border: 1px solid #CBCBCB;
+    transition: all 500ms ease;
+    margin: 0 auto;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .tabs-details input[type="radio"]:checked+label {
+    border: 3px solid #2D65AF;
+}
+
+.details .sizesImg img {
+    width: 100%;
+    height: auto;
+}
+
+.details h5 {
+    color: #868686;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+}
+
+.details .detailPrice {
+    margin: 10px 0 20px 0;
+    color: #000;
+}
+
+.details .detailsSubmit .btn {
+    background-color: #213A56;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 40px;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.details .detailsSubmit p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/*____ Fim Detalhes da Compra */
+
+
+/*____ Entrega */
+
+.form-group .formData h1 {
+    font-size: 45px;
+    color: #868686;
+    margin: 30px 0 80px;
+}
+
+.form-group .formData h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin: 40px 0 40px;
+}
+
+.form-group .formRow {
+    margin: 0 0 20px 0;
+}
+
+.form-group .formRow:last-of-type {
+    margin: 0;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    color: #868686;
+    font-size: 20px;
+    padding: 30px;
+    width: 100%;
+    height: 80px;
+    margin: 0 20px 0 0 !important;
+}
+
+.form-group input:last-of-type,
+.form-group textarea:last-of-type {
+    margin-right: 0 !important;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 164px;
+    margin: 0 0 20px 0;
+}
+
+.form-group select {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    color: #868686;
+    font-size: 20px;
+    padding: 30px;
+    width: 100%;
+    height: 80px;
+    margin: 0 20px 0 0;
+    -webkit-appearance: none;
+}
+
+.form-group .formValidation {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.form-group .formValidation::before {
+    content: '✖';
+    margin-right: 5px;
+}
+
+.form-group .btn {
+    font-size: 26px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    background-color: #213A56;
+    padding: 20px 0;
+}
+
+.form-group .btn-black {
+    background-color: #000000 !important;
+}
+
+.recipient .form-group .btn-black {
+    margin: 55px 0 0 0;
+}
+
+.delivery .form-group .btn-black {
+    text-transform: inherit;
+}
+
+.delivery .tabs-recipient {
+    padding: 0;
+}
+
+.delivery .tabs-recipient label {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    color: #868686;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    padding: 30px 20px 30px 30px;
+    width: 100%;
+    height: 80px;
+    transition: all 500ms ease;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
+}
+
+.delivery .tabs-recipient input {
+    display: none;
+    cursor: pointer;
+}
+
+.delivery .tabs-recipient input:checked+label {
+    border: 1px solid #5E8ECE;
+    color: #366AAA;
+}
+
+.delivery .addRecipient {
+    color: #366AAA;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/plus.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delivery .newRecipient {
+    display: flex;
+    align-items: center;
+    margin: 90px 0 20rem 0;
+}
+
+.registerUser .form-group .formData h1 {
+    font-size: 45px;
+    font-weight: normal;
+    color: #000;
+    margin: 94px 0 20px 0;
+}
+
+.registerUser .form-group .formData h1.account {
+    margin: 11px 0 0 0;
+}
+
+.registerUser .form-group .formData h2 {
+    font-size: 35px;
+    font-weight: normal;
+    color: #868686;
+    margin: 0 0 24px 0;
+}
+
+.registerUser .form-group .btn-black {
+    margin: 40px 0 0 0;
+}
+
+.registerUser .form-group .btn-outline-blue {
+    background-color: #FFFFFF;
+    border: 2px solid #2D65AF;
+    color: #366AAA;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: inherit;
+    margin: 0 0 27px 0;
+}
+
+.registerUser .form-group .or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerUser .form-group .or h3 {
+    color: #868686;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+}
+
+.registerUser .form-group .or hr {
+    color: #CBCBCB;
+}
+
+.contact .form-group .formData h1 {
+    color: #000;
+    margin: 50px 0;
+}
+
+.contact .form-group .formData h2 {
+    color: #868686;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 34px 0;
+}
+
+.contact .form-group .formData .btn-black {
+    margin: 34px 0 0 0;
+}
+
+
+/*____ Fim Entrega */
+
+
 /*____ Pagamento */
+
+.form-group .numberCard {
+    width: 96%;
+}
+
+.form-group .cvv {
+    background-image: url(../img/credit-card-cvv.svg);
+    background-position: 8rem center;
+    background-size: 55.6px 38.18px;
+    background-repeat: no-repeat;
+    margin: 0 0 20px 0;
+}
+
+.form-group .btn-card-info {
+    color: #366AAA;
+    background-color: #fff;
+    border: 2px solid #366AAA;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 100%;
+    width: 51px;
+    height: 51px;
+    margin: 1rem 0 0 16px;
+    padding: 15px 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkout .purchaseSummary h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 50px 0;
+}
+
+.checkout .purchaseCard {
+    border: 1px solid #CBCBCB;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.checkout .purchaseCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout .purchaseCard li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding: 15px 0;
+    border-bottom: 1px dashed #000000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout .purchaseCard li:last-of-type {
+    border-bottom: none;
+}
+
+.checkout .purchaseCard li .imgP {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    width: 110px;
+    height: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.checkout .purchaseCard li .imgP img {
+    border: none;
+    width: 92px;
+    height: auto;
+}
+
+.checkout .purchaseCard .productP {
+    color: #868686;
+    float: left;
+}
+
+.checkout .purchaseCard .priceP {
+    float: right;
+}
+
+.checkout .purchaseCard .total,
+.checkout .purchaseCard .total .productP {
+    color: #366AAA;
+    text-transform: uppercase;
+}
 
 
 /*____ Fim Pagamento */
@@ -792,7 +1139,7 @@ select:focus {
 /*____ Fim Footer */
 
 
-/*____ Media Queries */
+/*___________ Media Queries ___________*/
 
 @media (max-width: 991.98px) {
     .navSection a {
@@ -861,12 +1208,17 @@ select:focus {
 }
 
 @media (max-width: 767.98px) {
+    .details,
+    .about {
+        margin: 0 20px;
+        padding: 0;
+    }
     .mainNav {
         display: none;
     }
     .mobileNav {
         display: flex;
-        border-bottom: 1px solid #D6D6D6;
+        border-bottom: 1px solid #CBCBCB;
     }
     .footerNav {
         display: block;
@@ -1003,8 +1355,201 @@ select:focus {
         font-size: 20px;
         line-height: 25px;
     }
+    .btn-back {
+        border-bottom: 1px solid rgba(203, 203, 203, 0.4);
+        padding: 5px 20px;
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
     .btn-back-success {
         margin: 0 0 0 -1.5rem;
+    }
+    .form-group .formData h1 {
+        font-size: 28px;
+        margin: 20px 0 30px;
+    }
+    .form-group .formData h2 {
+        font-size: 22px;
+        margin: 20px 0 21px 0;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 15px;
+        padding: 20px;
+        width: 100%;
+        height: 60px;
+        margin: 0!important;
+    }
+    .form-group select {
+        font-size: 15px;
+        padding: 21px 24px;
+        width: 100%;
+        height: 60px;
+        margin: 0 10px 0 0;
+    }
+    .form-group .formRow {
+        margin: 0 0 10px 0;
+    }
+    .form-group textarea {
+        height: 140px;
+        margin: 0;
+    }
+    .recipient .form-group .col-sm-4 {
+        width: 33.33%;
+    }
+    .recipient .form-group .col-sm-8 {
+        width: 66.66%;
+    }
+    .recipient .form-group .col-sm-6 {
+        width: 50%;
+    }
+    .form-group .btn {
+        font-size: 25px;
+        height: 60px;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .recipient .form-group .btn-black {
+        margin: 30px 0 20px;
+        font-weight: bold;
+    }
+    .form-text {
+        font-size: 14px;
+    }
+    .checkout .formData .col-sm-5 {
+        width: 41.66%;
+    }
+    .checkout .formData .col-sm-4 {
+        width: 33.33%;
+    }
+    .checkout .formData .col-sm-2 {
+        width: 16.66%;
+    }
+    .checkout .form-group .btn-card-info {
+        margin: 0 0 0 16px;
+    }
+    .checkout .purchaseSummary {
+        margin: 50px 0 0 0;
+    }
+    .checkout .purchaseCard {
+        padding: 13px 20px 20px 20px;
+        margin-bottom: 50px;
+    }
+    .checkout .purchaseSummary h3 {
+        font-size: 28px;
+        margin: 0 0 20px 0;
+    }
+    .checkout .purchaseCard li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+    .checkout .purchaseCard .delivery {
+        flex-wrap: wrap;
+        position: relative;
+        align-items: flex-start;
+    }
+    .checkout .purchaseCard .delivery .priceP {
+        position: absolute;
+        right: 0;
+        top: 2.5rem;
+    }
+    .checkout .form-group .btn {
+        margin-bottom: 43px;
+    }
+    .contact .form-group .formData h1 {
+        margin: 57px 0 32px;
+    }
+    .contact .form-group .formData h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 0 0 20px 0;
+    }
+    .contact .form-group .formData .btn-black {
+        margin: 20px 0 111px 0;
+    }
+    .registerUser .form-group .formData h1 {
+        font-size: 25px;
+        margin: 31px 0 11px 0;
+    }
+    .registerUser .form-group .btn-outline-blue {
+        font-size: 16px;
+        margin: 0 0 15px 0;
+        height: 40px;
+        padding: 12px 0;
+    }
+    .registerUser .form-group .or {
+        margin: 0;
+    }
+    .registerUser .form-group .or h3 {
+        font-size: 16px;
+    }
+    .registerUser .or .col-sm-4 {
+        width: 33.33%;
+    }
+    .registerUser .form-group .formData h2 {
+        font-size: 20px;
+        margin: 0 0 20px 0;
+    }
+    .delivery .tabs-recipient label {
+        padding: 23px 15px 23px 20px;
+        height: 60px;
+        font-size: 15px;
+    }
+    .delivery .addRecipient {
+        width: 15px;
+        height: 15px;
+    }
+    .delivery .newRecipient {
+        margin: 0 0 54px 0;
+    }
+    .details .detailsTitle {
+        font-size: 25px;
+    }
+    .details .detailsArea {
+        padding: 0;
+    }
+    .details .more {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 12px 0;
+    }
+    .details .morelink {
+        font-size: 15px;
+    }
+    .detailsInput h6 {
+        font-size: 15px;
+        margin: 0 0 5px 0;
+    }
+    .detailsInput p {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: lighter;
+    }
+    .details .detailsInput .col-sm-1 {
+        width: 8.33%;
+    }
+    .details .detailsInput .col-sm-11 {
+        width: 91.66%;
+    }
+    .detailsInput .detailsImg img {
+        width: 44.77px !important;
+        height: 44.77px !important;
+    }
+    .details .detailsSubmit .btn {
+        font-size: 25px;
+        padding: 15px;
+        margin: 0 0 30px 0;
+        height: 60px;
+    }
+    .details .detailsSubmit p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .details .tabs-details .col-sm-4 {
+        width: 33.33%;
     }
 }
 

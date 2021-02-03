@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+
+    <title>BOUQS | Adicionar Destinatário</title>
+</head>
+
+<body>
+
+    <nav class="mainNav">
+        <div class="container">
+            <div class="row">
+                <div class="navTitle col-sm-3">
+                    <h1>BOUQS</h1>
+                    <a href="#">
+                        <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    </a>
+                </div>
+
+                <div class="tabs navSection col-sm-6">
+                    <a href="#" class="sections">
+                        <input type="radio" id="tab1" name="tab">
+                        <label for="tab1">
+                            <img src="assets/img/flower.svg" alt="Loja">
+                        </label>
+                    </a>
+
+                    <a href="#" class="sections">
+                        <input type="radio" id="tab2" name="tab" checked="checked">
+                        <label for="tab2">
+                            <img src="assets/img/personal_data.svg" alt="Entrega">
+                        </label>
+                    </a>
+
+                    <a href="#" class="sections">
+                        <input type="radio" id="tab3" name="tab">
+                        <label for="tab3">
+                            <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
+                        </label>
+                    </a>
+                </div>
+
+                <div class="navBuy col-sm-3">
+                    <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
+                    <a href="#" class="buyLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="mobileNav">
+        <div class="container">
+            <div class="row">
+                <div class="navTitle">
+                    <h1>BOUQS</h1>
+                    <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                </div>
+
+
+                <input type="checkbox" id="change-hamburguer">
+                <a class="hamburguer" href="#">
+                    <span></span>
+                    <label for="change-hamburguer"></label>
+                </a>
+
+                <div class="menu">
+                    <a href="#">Login</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                </div>
+
+                <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
+
+            </div>
+        </div>
+    </nav>
+
+    <nav class="footerNav">
+        <div class="container">
+            <div class="row">
+                <div class="tabs navSection col-sm-6">
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot1" name="footerTab">
+                        <label for="foot1">
+                        <img src="assets/img/flower.svg" alt="Loja">
+                    </label>
+                    </a>
+
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot2" name="footerTab" checked="checked">
+                        <label for="foot2">
+                        <img src="assets/img/personal_data.svg" alt="Entrega">
+                    </label>
+                    </a>
+
+                    <a href="#" class="sections">
+                        <input type="radio" id="foot3" name="footerTab">
+                        <label for="foot3">
+                        <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
+                    </label>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="btn-back"><img src="assets/img/arrow_back.svg" alt="Voltar"></a>
+
+    <section class="details">
+        <div class="container">
+
+            <section class="recipient">
+                <form action="#">
+                    <div class="row form-group">
+                        <div class="col-sm-7 formData no-padding">
+                            <h1>Dados do sortudo(a)</h1>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <h2>Para:</h2>
+                                <input type="text" name="recipientName" id="nameInp" placeholder="Nome">
+                                <small class="formValidation">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <h2>Endereço:</h2>
+                                <input type="text" name="neighborhood" id="neighborhoodInp" placeholder="Bairro" class="formRow">
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <input type="text" name="street" id="streetInp" placeholder="Rua">
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="row col-sm-12 no-padding formRow">
+                                <div class="col-sm-4 no-padding-left">
+                                    <input type="text" name="adNumber" id="addressInp" placeholder="Nº">
+                                    <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                                </div>
+
+                                <div class="col-sm-8 no-padding">
+                                    <input type="text" name="adCompl" id="complInp" placeholder="Complemento">
+                                    <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <h2>Telefone presenteado(a):</h2>
+                                <input type="tel" name="tel" id="telInp" placeholder="*Tel.:">
+                                <small class="form-text">*Será utilizado em caso de problemas na entrega.</small>
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <h2>Mensagem:</h2>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Escreva aqui sua mensagem"></textarea>
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="col-sm-12 no-padding formRow">
+                                <input type="text" name="signature" id="signatureInp" placeholder="Assinatura">
+                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                            </div>
+
+                            <div class="row col-sm-12 no-padding formRow">
+                                <div class="col-sm-6 no-padding-left">
+                                    <h2>Quando:</h2>
+                                    <select name="recipientWhere" id="recWhere">
+                                        <option value="5" selected><span class="dayWeek">HOJE</span> - DIA <span class="dayMonth">19/11</span></option>
+                                        <option value="6"><span class="dayWeek">AMANHÃ</span> - DIA <span class="dayMonth">20/11</span></option>
+                                        <option value="7"><span class="dayWeek">SÁBADO</span> - DIA <span class="dayMonth">21/11</span></option>
+                                    </select>
+                                    <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                                </div>
+
+                                <div class="col-sm-6 no-padding">
+                                    <h2>Horário:</h2>
+                                    <select name="recipientTime" id="recTime">
+                                        <option value="M" selected><span class="dayShift">MANHÃ</span> - <span class="deliveryTime">08h às 12h</span></option>
+                                        <option value="T"><span class="dayShift">TARDE</span> - <span class="deliveryTime">13h às 18h</span></option>
+                                        <option value="N"><span class="dayShift">NOITE</span> - <span class="deliveryTime">19h às 22h</span></option>
+                                    </select>
+                                    <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-black">Próximo</button>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+        </div>
+    </section>
+
+    <footer class="mainFooter">
+        <div class="container">
+            <a href="#">
+                <img src="assets/img/logo.svg" alt="Logo BOUQS">
+            </a>
+            <p>Copyright © 2020 | bouqs | desenvolvido por Irion Interactive</p>
+        </div>
+    </footer>
+
+    <div class="footerMargin">&nbsp;</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/read_more.js"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>
