@@ -16,17 +16,19 @@
 
 <body>
 
-    <nav class="mainNav">
+    <nav class="mainNav marginNav">
         <div class="container">
             <div class="row">
-                <div class="navTitle col-sm-3">
+                <div class="navTitle col-sm-2">
                     <h1>BOUQS</h1>
-                    <a href="#">
+                    <a href="index.html">
                         <img src="assets/img/logo.svg" alt="Logo BOUQS">
                     </a>
                 </div>
 
-                <div class="tabs navSection col-sm-6">
+                <div class="col-sm-1 no-padding"></div>
+
+                <div class="tabs navSection col-sm-5 no-padding">
                     <a href="#" class="sections">
                         <input type="radio" id="tab1" name="tab">
                         <label for="tab1">
@@ -34,14 +36,14 @@
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
+                    <a href="user_area.html" class="sections">
                         <input type="radio" id="tab2" name="tab">
                         <label for="tab2">
                             <img src="assets/img/personal_data.svg" alt="Entrega">
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
+                    <a href="checkout.html" class="sections">
                         <input type="radio" id="tab3" name="tab" checked="checked">
                         <label for="tab3">
                             <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
@@ -49,9 +51,14 @@
                     </a>
                 </div>
 
-                <div class="navBuy col-sm-3">
+                <div class="navSocial col-sm-3 no-padding">
+                    <a href="about.html" class="socialAbout">Sobre</a>
+                    <a href="contact.html" class="socialContact">Contato</a>
+                    <a href="login.html" class="socialLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
+                </div>
+
+                <div class="navBuy col-sm-1 no-padding">
                     <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
-                    <a href="#" class="buyLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
                 </div>
             </div>
         </div>
@@ -62,7 +69,9 @@
             <div class="row">
                 <div class="navTitle">
                     <h1>BOUQS</h1>
-                    <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    <a href="index.html">
+                        <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    </a>
                 </div>
 
 
@@ -73,9 +82,9 @@
                 </a>
 
                 <div class="menu">
-                    <a href="#">Login</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <a href="login.html">Login</a>
+                    <a href="about.html">Sobre</a>
+                    <a href="contact.html">Contato</a>
                 </div>
 
                 <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
@@ -145,10 +154,13 @@
                                     <button type="button" class="btn-card-info" data-toggle="tooltip" data-placement="bottom" title="O número do CVV fica atrás do seu cartão de crédito e é composto por três ou quatro dígitos.">?</button>
                                 </div>
                             </div>
+
                             <div class="col-sm-11 no-padding formRow">
                                 <input type="text" name="cardName" id="nameInp" placeholder="Nome impresso no cartão">
                                 <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
                             </div>
+
+                            <button type="submit" class="btn btn-blue btn-buy-desk col-sm-11">Finalizar Pedido</button>
                         </div>
 
                         <div class="col-sm-5 purchaseSummary no-padding">
@@ -182,7 +194,7 @@
                                 </ul>
                             </div>
 
-                            <button type="submit" class="btn btn-blue">Finalizar Pedido</button>
+                            <button type="submit" class="btn btn-blue btn-buy-mobile">Finalizar Pedido</button>
                         </div>
                     </div>
                 </form>

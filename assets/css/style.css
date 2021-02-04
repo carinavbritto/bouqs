@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
 }
 
 div:focus,
@@ -33,6 +36,10 @@ textarea:focus {
 
 /*____ Header */
 
+.marginNav {
+    margin-bottom: 25px;
+}
+
 .mainNav {
     border-bottom: 1px solid #D6D6D6;
 }
@@ -41,7 +48,7 @@ textarea:focus {
     padding: 15px 0;
 }
 
-.mainNav a {
+.navSocial a {
     font-size: 16px;
     text-transform: uppercase;
     color: #868686;
@@ -51,9 +58,9 @@ textarea:focus {
     height: auto;
 }
 
-.mainNav a:hover {
+.navSocial a:hover {
     transition: all 300ms;
-    opacity: 0.7;
+    color: #366AAA;
 }
 
 .navTitle {
@@ -78,21 +85,12 @@ textarea:focus {
 
 .navSection {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.navSection a {
-    margin-right: 85px;
 }
 
 .navSection a:last-of-type {
     margin-right: 0;
-}
-
-.navSection a:hover {
-    transition: all 300ms;
-    filter: grayscale(1) brightness(1.5);
 }
 
 .tabs {
@@ -112,6 +110,11 @@ textarea:focus {
     filter: grayscale(1) brightness(1.5);
 }
 
+.tabs label img {
+    width: 32.79px;
+    height: 32.79px;
+}
+
 .tabs input {
     display: none;
     cursor: pointer;
@@ -125,6 +128,31 @@ textarea:focus {
 
 /* fim Tabs Section*/
 
+.navSocial {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navSocial a {
+    margin-right: 1rem;
+}
+
+.navSocial a:last-of-type {
+    margin-right: 0;
+}
+
+.navSocial .socialLogin {
+    display: flex;
+    align-items: baseline;
+}
+
+.navSocial .socialLogin img {
+    width: 11.8px;
+    height: auto;
+    margin: 0 5px 0 0;
+}
+
 .navBuy {
     display: flex;
     justify-content: space-around;
@@ -134,17 +162,6 @@ textarea:focus {
 .navBuy .buyCart img {
     width: 33px;
     height: auto;
-}
-
-.navBuy .buyLogin {
-    display: flex;
-    align-items: baseline;
-}
-
-.navBuy .buyLogin img {
-    width: 11.8px;
-    height: auto;
-    margin: 0 5px 0 0;
 }
 
 
@@ -166,8 +183,8 @@ textarea:focus {
     position: absolute;
     width: 15px;
     height: 15px;
-    right: -0.3rem;
-    top: -0.4rem;
+    right: -0.35rem;
+    top: -0.2rem;
     border-radius: 100%;
 }
 
@@ -318,20 +335,20 @@ textarea:focus {
 /*____ Banner */
 
 .banner {
-    padding: 170px 0 0 0;
+    padding: 143px 0 0 0;
     background-image: url('../img/bg_banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right center;
+    background-position: -10rem center;
     background-color: #D6D6D6;
     width: 100%;
     height: auto;
 }
 
 .banner h1 {
-    font-size: 45px;
+    font-size: 38px;
     font-weight: lighter;
-    padding: 0 19rem 170px 0;
+    padding: 0 27rem 212px 0;
     margin: 0;
 }
 
@@ -347,7 +364,7 @@ textarea:focus {
 /*____ Barra de Pesquisa */
 
 .searchBar {
-    margin: -6.8rem 0 0 0;
+    margin: -5rem 0 0 0;
 }
 
 .searchBar .col {
@@ -360,39 +377,50 @@ textarea:focus {
     border-top: 1px solid #D6D6D6;
     border-left: 1px solid #D6D6D6;
     border-bottom: 2px solid #D6D6D6;
-    color: #D6D6D6;
-    padding: 30px 40px;
+    color: #868686;
+    padding: 15px 10px 15px 40px;
     font-weight: lighter;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    height: 80px;
 }
 
 .searchBar .inputTitle {
-    padding: 0 0 0 5px;
+    padding: 0 0 0 10px;
+}
+
+.searchBar #locationBox .inputTitle {
+    padding: 0;
 }
 
 .searchBar .searchInput #city {
     color: #366AAA;
 }
 
-.searchBar .searchInput img {
-    height: 45px;
-    width: 45px;
+.searchBar .searchInput .searchImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
+}
+
+.searchBar .searchInput .searchImg img {
+    width: 100%;
+    height: auto;
 }
 
 .searchBar .searchInput h6 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .searchBar select {
     -webkit-appearance: none;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
     color: #000000;
     background-color: #FFFFFF !important;
     cursor: pointer;
@@ -403,10 +431,10 @@ textarea:focus {
     background-color: #2A5283;
     color: #fff;
     font-size: 30px;
-    font-weight: bold;
     text-transform: uppercase;
     border: none;
     border-radius: 0;
+    height: 80px;
 }
 
 
@@ -416,7 +444,7 @@ textarea:focus {
 /*____ Loja */
 
 .store {
-    padding: 70px 0;
+    padding: 40px 0 58px;
 }
 
 .store .container {
@@ -429,8 +457,8 @@ textarea:focus {
     color: #868686;
     font-weight: lighter;
     text-align: center;
-    margin: 0 0 70px 0;
-    font-size: 45px;
+    margin: 0 0 50px 0;
+    font-size: 35px;
 }
 
 .store .mainTitle strong {
@@ -474,7 +502,7 @@ textarea:focus {
 .store .productDetails .productType {
     text-transform: uppercase;
     color: #868686;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bolder;
     margin: 0;
 }
@@ -499,7 +527,7 @@ textarea:focus {
 }
 
 .login .title {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 4rem;
 }
@@ -507,11 +535,12 @@ textarea:focus {
 .login input {
     background-color: #EBEBEB;
     color: #868686;
-    font-size: 23px;
+    font-size: 20px;
     border: none;
-    padding: 15px 0 15px 39px;
-    margin-bottom: 20px;
+    padding: 23px 20px;
+    margin-bottom: 15px;
     width: 100%;
+    height: 60px;
 }
 
 .login button {
@@ -519,18 +548,23 @@ textarea:focus {
     color: #fff;
     text-transform: uppercase;
     border-radius: 0;
-    padding: 15px 0;
-    font-size: 23px;
+    padding: 28px 0;
+    font-size: 30px;
     font-weight: bold;
     width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .login .forgot {
     text-align: left;
     color: #868686;
-    margin: 15px 0 0 0;
+    margin: 14px 0 0 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .login .forgot a {
@@ -545,11 +579,11 @@ textarea:focus {
 /*____ Detalhes da Compra */
 
 .details {
-    padding: 44px 0 81px;
+    padding: 0 0 38px;
 }
 
 .btn-back {
-    margin: 0 0 0 -0.9rem;
+    margin: 0 0 0 12rem;
     padding: 0;
 }
 
@@ -566,12 +600,31 @@ textarea:focus {
 
 .details .detailsTitle {
     color: #000000;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .details .detailsCarousel {
     padding: 30px 0 0 0;
+}
+
+.details .carousel-inner {
+    width: auto;
+    height: 70.59rem;
+}
+
+.details .carousel-item {
+    width: auto;
+    height: 100%;
+}
+
+.details .w-100 {
+    width: auto !important;
+    height: 100% !important;
+}
+
+.details .carousel-indicators {
+    bottom: -3rem;
 }
 
 .details .carousel-indicators li {
@@ -586,9 +639,24 @@ textarea:focus {
     border: 1px solid #000000;
 }
 
+.details .carousel-control-next,
+.carousel-control-prev {
+    opacity: 0;
+}
+
+.details .carousel-control-next:focus,
+.details .carousel-control-next:hover,
+.details .carousel-control-prev:focus,
+.details .carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0;
+}
+
 .details .more {
     color: #868686;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 25px;
     margin: 0 0 26px 0;
 }
@@ -602,7 +670,7 @@ textarea:focus {
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
@@ -639,8 +707,8 @@ textarea:focus {
 }
 
 .detailsInput p {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 25px;
     font-weight: lighter;
     color: #000000;
     margin: 0;
@@ -667,6 +735,49 @@ textarea:focus {
     margin: 30px 0;
 }
 
+.details .detailsSizes h6,
+.details .detailsGifts h6 {
+    font-size: 18px;
+}
+
+.details .sizesImg img {
+    width: 100%;
+    height: auto;
+}
+
+.details h5 {
+    color: #868686;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+}
+
+.details .detailPrice {
+    margin: 10px 0 20px 0;
+    color: #000;
+    font-size: 16px;
+}
+
+.details .detailsSubmit .btn {
+    background-color: #213A56;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 40px;
+    width: 100%;
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .detailsSubmit p {
+    font-size: 16px;
+    margin: 0;
+}
+
 .details .tabs-details input[type="radio"] {
     display: none;
     cursor: pointer;
@@ -687,42 +798,16 @@ textarea:focus {
     align-items: center;
 }
 
+.details .tabs-details label+.detailPrice {
+    color: #868686 !important;
+}
+
 .details .tabs-details input[type="radio"]:checked+label {
     border: 3px solid #2D65AF;
 }
 
-.details .sizesImg img {
-    width: 100%;
-    height: auto;
-}
-
-.details h5 {
-    color: #868686;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 15px 0 0 0;
-}
-
-.details .detailPrice {
-    margin: 10px 0 20px 0;
-    color: #000;
-}
-
-.details .detailsSubmit .btn {
-    background-color: #213A56;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 0;
-    padding: 40px;
-    width: 100%;
-    margin: 0 0 15px 0;
-}
-
-.details .detailsSubmit p {
-    font-size: 16px;
-    margin: 0;
+.details .tabs-details input[type="radio"]:checked+label+.detailPrice {
+    color: #000000 !important;
 }
 
 
@@ -732,16 +817,16 @@ textarea:focus {
 /*____ Entrega */
 
 .form-group .formData h1 {
-    font-size: 45px;
-    color: #868686;
-    margin: 30px 0 80px;
+    font-size: 35px;
+    color: #000000;
+    margin: 30px 0 57px;
 }
 
 .form-group .formData h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #000000;
-    margin: 40px 0 40px;
+    margin: 17px 0 15px;
 }
 
 .form-group .formRow {
@@ -757,10 +842,10 @@ textarea:focus {
     background-color: #FFFFFF;
     border: 1px solid #CBCBCB;
     color: #868686;
-    font-size: 20px;
-    padding: 30px;
+    font-size: 16px;
+    padding: 25px 20px;
     width: 100%;
-    height: 80px;
+    height: 60px;
     margin: 0 20px 0 0 !important;
 }
 
@@ -779,10 +864,10 @@ textarea:focus {
     background-color: #FFFFFF;
     border: 1px solid #CBCBCB;
     color: #868686;
-    font-size: 20px;
-    padding: 30px;
+    font-size: 16px;
+    padding: 15px 20px;
     width: 100%;
-    height: 80px;
+    height: 60px;
     margin: 0 20px 0 0;
     -webkit-appearance: none;
 }
@@ -799,17 +884,29 @@ textarea:focus {
 }
 
 .form-group .btn {
-    font-size: 26px;
+    font-size: 30px;
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
     background-color: #213A56;
     padding: 20px 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-group .btn-black {
     background-color: #000000 !important;
+}
+
+.form-group .btn-buy-desk {
+    margin-top: 40px;
+}
+
+.form-group .btn-buy-mobile {
+    display: none;
 }
 
 .recipient .form-group .btn-black {
@@ -876,35 +973,36 @@ textarea:focus {
 }
 
 .registerUser .form-group .formData h1 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: normal;
     color: #000;
-    margin: 94px 0 20px 0;
+    margin: 25px 0 22px 0;
 }
 
 .registerUser .form-group .formData h1.account {
-    margin: 11px 0 0 0;
+    margin: 19px 0 0 0;
 }
 
 .registerUser .form-group .formData h2 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: normal;
     color: #868686;
-    margin: 0 0 24px 0;
+    margin: 0 0 30px 0;
 }
 
 .registerUser .form-group .btn-black {
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
 }
 
 .registerUser .form-group .btn-outline-blue {
     background-color: #FFFFFF;
     border: 2px solid #2D65AF;
     color: #366AAA;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: inherit;
-    margin: 0 0 27px 0;
+    margin: 0 0 20px 0;
+    height: 60px;
 }
 
 .registerUser .form-group .or {
@@ -969,7 +1067,7 @@ textarea:focus {
     border-radius: 100%;
     width: 51px;
     height: 51px;
-    margin: 1rem 0 0 16px;
+    margin: 0.3rem 0 0 16px;
     padding: 15px 23px;
     display: flex;
     justify-content: center;
@@ -978,16 +1076,16 @@ textarea:focus {
 }
 
 .checkout .purchaseSummary h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #000000;
-    margin: 0 0 50px 0;
+    margin: 0 0 5px 0;
 }
 
 .checkout .purchaseCard {
     border: 1px solid #CBCBCB;
-    padding: 50px;
-    margin-bottom: 30px;
+    padding: 37px 45px 30px;
+    margin: 7.9rem 0 15px;
 }
 
 .checkout .purchaseCard ul {
@@ -1001,7 +1099,7 @@ textarea:focus {
 
 .checkout .purchaseCard li {
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #000;
     padding: 15px 0;
@@ -1046,6 +1144,7 @@ textarea:focus {
 .checkout .purchaseCard .total .productP {
     color: #366AAA;
     text-transform: uppercase;
+    font-size: 18px;
 }
 
 
@@ -1090,15 +1189,15 @@ textarea:focus {
 .success .title {
     text-transform: uppercase;
     color: #366AAA;
-    font-size: 74px;
-    margin: 0 0 45px 0;
+    font-size: 45px;
+    margin: 9rem 0 38px 0;
 }
 
 .success .successMessage {
     border-top: 1px solid #2D65AF;
-    padding: 45px 0 10rem 0;
-    font-size: 53px;
-    line-height: 66px;
+    padding: 34px 0 10rem 0;
+    font-size: 30px;
+    line-height: 40px;
     color: #868686;
 }
 
@@ -1113,7 +1212,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 62px 0 33px 0;
+    padding: 62px 0 37px 0;
 }
 
 .mainFooter img {
@@ -1123,12 +1222,12 @@ textarea:focus {
 .mainFooter p {
     text-transform: uppercase;
     margin: 0;
-    padding: 33px 0 0 0;
+    padding: 37px 0 0 0;
     border-top: 1px solid #D6D6D6;
     width: 100%;
     text-align: center;
     color: #366AAA;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .footerMargin {
@@ -1142,11 +1241,9 @@ textarea:focus {
 /*___________ Media Queries ___________*/
 
 @media (max-width: 991.98px) {
-    .navSection a {
-        margin-right: 40px;
-    }
-    .navSection a:hover {
-        filter: none;
+    .navSocial a {
+        font-size: 13px;
+        margin-right: 0.5rem;
     }
     .banner {
         padding: 90px 0 0 0;
@@ -1170,10 +1267,13 @@ textarea:focus {
     .searchBar .searchInput img {
         height: 45px;
         width: 45px;
-        padding: 0 5px 10px;
+        padding: 0 0px 0 15px;
     }
     .searchBar .inputTitle {
-        padding: 0;
+        padding: 0 0 0 10px;
+    }
+    .searchBar #locationBox .inputTitle {
+        padding: 0 0 0 5px;
     }
     .searchBar .btn {
         background-color: #2A5283;
@@ -1231,6 +1331,10 @@ textarea:focus {
         box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
         padding: 15px;
     }
+    .footerNav .tabs label img {
+        width: 27px;
+        height: 27px;
+    }
     .buyCart {
         margin-right: 0;
         position: absolute;
@@ -1245,12 +1349,13 @@ textarea:focus {
         height: auto;
     }
     .banner {
-        padding: 64px 0 0 0;
-        background-position: right center;
+        padding: 63px 0 0 0;
+        background-position: -3rem center;
         background-image: url('../img/bg_banner_mobile.jpg');
     }
     .banner h1 {
-        padding: 0 9rem 70px 0;
+        padding: 0 7rem 70px 0;
+        font-size: 18px;
     }
     .searchBar {
         margin: -0.8rem 0 0 0;
@@ -1305,12 +1410,12 @@ textarea:focus {
         margin-bottom: 22px;
     }
     .mainFooter p {
-        padding: 20px 1.5rem 0;
+        padding: 22px 1.5rem 0;
         font-size: 12px;
     }
     .footerMargin {
         display: block;
-        margin: 0 0 4rem 0;
+        margin: 0 0 4.6rem 0;
         height: 10px;
         width: 100%;
         background-color: transparent;
@@ -1324,12 +1429,14 @@ textarea:focus {
     }
     .login input {
         font-size: 14px;
-        padding: 14px 0 14px 26px;
+        padding: 16px 20px;
         margin-bottom: 10px;
+        height: 40px;
     }
     .login button {
         font-size: 14px;
-        padding: 10.6px 0;
+        padding: 16px 0;
+        height: 40px;
     }
     .login .forgot {
         font-size: 12px;
@@ -1395,13 +1502,19 @@ textarea:focus {
         height: 140px;
         margin: 0;
     }
-    .recipient .form-group .col-sm-4 {
+    .form-group .btn-buy-mobile {
+        display: flex;
+    }
+    .form-group .btn-buy-desk {
+        display: none !important;
+    }
+    .recipient .form-group .formRow .col-sm-4 {
         width: 33.33%;
     }
-    .recipient .form-group .col-sm-8 {
+    .recipient .form-group .formRow .col-sm-8 {
         width: 66.66%;
     }
-    .recipient .form-group .col-sm-6 {
+    .recipient .form-group .formRow .col-sm-6 {
         width: 50%;
     }
     .form-group .btn {
@@ -1436,7 +1549,7 @@ textarea:focus {
     }
     .checkout .purchaseCard {
         padding: 13px 20px 20px 20px;
-        margin-bottom: 50px;
+        margin: 0 0 50px;
     }
     .checkout .purchaseSummary h3 {
         font-size: 28px;
@@ -1444,6 +1557,10 @@ textarea:focus {
     }
     .checkout .purchaseCard li {
         padding: 10px 0;
+        font-size: 22px;
+    }
+    .checkout .purchaseCard .total,
+    .checkout .purchaseCard .total .productP {
         font-size: 22px;
     }
     .checkout .purchaseCard .delivery {
@@ -1550,7 +1667,70 @@ textarea:focus {
     }
     .details .tabs-details .col-sm-4 {
         width: 33.33%;
+        padding: 0 5px;
+    }
+    .details .carousel-inner {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .details .carousel-item {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .details .w-100 {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .details .carousel-indicators {
+        bottom: 0;
     }
 }
 
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    .form-group .formData h1 {
+        font-size: 22px;
+        margin: 20px 0 15px;
+    }
+    .form-group .formData h2 {
+        font-size: 18px;
+        margin: 15px 0 21px 0;
+    }
+    .form-group .formValidation {
+        font-size: 10px;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+        padding: 15px;
+    }
+    .form-group select {
+        font-size: 13px;
+        padding: 15px;
+        width: 100%;
+        margin: 0;
+    }
+    .form-text {
+        font-size: 12px;
+    }
+    .checkout .purchaseCard li {
+        font-size: 15px;
+    }
+    .checkout .purchaseCard .total,
+    .checkout .purchaseCard .total .productP {
+        font-size: 18px;
+    }
+    .detailsInput p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .detailsInput .detailsImg img {
+        width: 36.77px !important;
+        height: 36.77px !important;
+    }
+    .details .detailsSubmit .btn {
+        font-size: 20px;
+    }
+    .mainFooter p {
+        padding: 22px 0.5rem 0;
+    }
+}

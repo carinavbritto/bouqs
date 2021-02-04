@@ -16,17 +16,19 @@
 
 <body>
 
-    <nav class="mainNav">
+    <nav class="mainNav marginNav">
         <div class="container">
             <div class="row">
-                <div class="navTitle col-sm-3">
+                <div class="navTitle col-sm-2">
                     <h1>BOUQS</h1>
-                    <a href="#">
+                    <a href="index.html">
                         <img src="assets/img/logo.svg" alt="Logo BOUQS">
                     </a>
                 </div>
 
-                <div class="tabs navSection col-sm-6">
+                <div class="col-sm-1 no-padding"></div>
+
+                <div class="tabs navSection col-sm-5 no-padding">
                     <a href="#" class="sections">
                         <input type="radio" id="tab1" name="tab">
                         <label for="tab1">
@@ -34,14 +36,14 @@
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
+                    <a href="user_area.html" class="sections">
                         <input type="radio" id="tab2" name="tab" checked="checked">
                         <label for="tab2">
                             <img src="assets/img/personal_data.svg" alt="Entrega">
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
+                    <a href="checkout.html" class="sections">
                         <input type="radio" id="tab3" name="tab">
                         <label for="tab3">
                             <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
@@ -49,9 +51,14 @@
                     </a>
                 </div>
 
-                <div class="navBuy col-sm-3">
+                <div class="navSocial col-sm-3 no-padding">
+                    <a href="about.html" class="socialAbout">Sobre</a>
+                    <a href="contact.html" class="socialContact">Contato</a>
+                    <a href="login.html" class="socialLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
+                </div>
+
+                <div class="navBuy col-sm-1 no-padding">
                     <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
-                    <a href="#" class="buyLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
                 </div>
             </div>
         </div>
@@ -62,7 +69,9 @@
             <div class="row">
                 <div class="navTitle">
                     <h1>BOUQS</h1>
-                    <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    <a href="index.html">
+                        <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    </a>
                 </div>
 
 
@@ -73,9 +82,9 @@
                 </a>
 
                 <div class="menu">
-                    <a href="#">Login</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <a href="login.html">Login</a>
+                    <a href="about.html">Sobre</a>
+                    <a href="contact.html">Contato</a>
                 </div>
 
                 <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
@@ -143,9 +152,6 @@
                             <div class="row col-sm-12 no-padding newRecipient">
                                 <div class="col-sm-6 no-padding">
                                     <h2>Novo presenteado:</h2>
-                                </div>
-
-                                <div class="col-sm-6 no-padding">
                                     <button type="submit" class="btn btn-black">Inserir novo</button>
                                 </div>
                             </div>

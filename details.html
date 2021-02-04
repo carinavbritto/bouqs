@@ -16,32 +16,34 @@
 
 <body>
 
-    <nav class="mainNav">
+    <nav class="mainNav marginNav">
         <div class="container">
             <div class="row">
-                <div class="navTitle col-sm-3">
+                <div class="navTitle col-sm-2">
                     <h1>BOUQS</h1>
-                    <a href="#">
+                    <a href="index.html">
                         <img src="assets/img/logo.svg" alt="Logo BOUQS">
                     </a>
                 </div>
 
-                <div class="tabs navSection col-sm-6">
+                <div class="col-sm-1 no-padding"></div>
+
+                <div class="tabs navSection col-sm-5 no-padding">
                     <a href="#" class="sections">
-                        <input type="radio" id="tab1" name="tab" checked="checked">
+                        <input type="radio" id="tab1" name="tab">
                         <label for="tab1">
                             <img src="assets/img/flower.svg" alt="Loja">
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
-                        <input type="radio" id="tab2" name="tab">
+                    <a href="user_area.html" class="sections">
+                        <input type="radio" id="tab2" name="tab" checked="checked">
                         <label for="tab2">
                             <img src="assets/img/personal_data.svg" alt="Entrega">
                         </label>
                     </a>
 
-                    <a href="#" class="sections">
+                    <a href="checkout.html" class="sections">
                         <input type="radio" id="tab3" name="tab">
                         <label for="tab3">
                             <img src="assets/img/credit-card-payment.svg" alt="Pagamento">
@@ -49,9 +51,14 @@
                     </a>
                 </div>
 
-                <div class="navBuy col-sm-3">
+                <div class="navSocial col-sm-3 no-padding">
+                    <a href="about.html" class="socialAbout">Sobre</a>
+                    <a href="contact.html" class="socialContact">Contato</a>
+                    <a href="login.html" class="socialLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
+                </div>
+
+                <div class="navBuy col-sm-1 no-padding">
                     <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
-                    <a href="#" class="buyLogin"><img src="assets/img/user.svg" alt="Login">Login</a>
                 </div>
             </div>
         </div>
@@ -62,7 +69,9 @@
             <div class="row">
                 <div class="navTitle">
                     <h1>BOUQS</h1>
-                    <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    <a href="index.html">
+                        <img src="assets/img/logo.svg" alt="Logo BOUQS">
+                    </a>
                 </div>
 
 
@@ -73,9 +82,9 @@
                 </a>
 
                 <div class="menu">
-                    <a href="#">Login</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <a href="login.html">Login</a>
+                    <a href="about.html">Sobre</a>
+                    <a href="contact.html">Contato</a>
                 </div>
 
                 <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
@@ -119,27 +128,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 detailsCarousel container">
-                    <div id="carouselExampleIndicators row" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         </ol>
-                        <div class="carousel-inner col-sm-12 row">
-                            <div class="carousel-item active ">
-                                <img class="d-block w-100" src="assets/img/buque_evora.jpg" alt="Primeiro Slide">
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="assets/img/buque_evora_carousel.jpg" alt="Primeiro Slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/buque_madri.jpg" alt="Segundo Slide">
+                                <img class="d-block w-100" src="assets/img/buque_evora_carousel.jpg" alt="Segundo Slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/buque_murano.jpg" alt="Terceiro Slide">
+                                <img class="d-block w-100" src="assets/img/buque_evora_carousel.jpg" alt="Terceiro Slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Anterior</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Próximo</span>
                         </a>
                     </div>
@@ -285,6 +296,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/read_more.js"></script>
 </body>
 
