@@ -243,6 +243,7 @@
                                         <div class="sizesImg">
                                             <img src="assets/img/bombom_ferrero_rocher.png" alt="Ferrero Rocher">
                                         </div>
+                                        <button class="btn-remove-gift"><img src="assets/img/btn-remove-gift.svg" alt="Remover presente adi"></button>
                                     </label>
                                     <h5 class="detailGiftTitle">Ferrero Rocher</h5>
                                     <h5 class="detailPrice">R$ 39.90</h5>
@@ -269,6 +270,8 @@
                                     <h5 class="detailGiftTitle">Urso Love</h5>
                                     <h5 class="detailPrice">R$ 59.90</h5>
                                 </div>
+
+
                             </div>
                         </div>
 
@@ -307,20 +310,23 @@
             centerPadding: '0',
             slidesToShow: 3,
             dots: false,
+            arrows: true,
+            infinite: true,
             responsive: [{
                 breakpoint: 768,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 2
+                    infinite: false,
+                    centerPadding: '0px',
+                    slidesToShow: 1.5
                 }
             }, {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '60px',
+                    centerPadding: '0px',
                     slidesToShow: 1.5
                 }
             }]
