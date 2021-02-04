@@ -1684,6 +1684,12 @@ textarea:focus {
     .details .carousel-indicators {
         bottom: 0;
     }
+    .details h5 {
+        font-size: 15px;
+    }
+    .details .detailPrice {
+        margin: 5px 0 20px 0;
+    }
 }
 
 @media (max-width: 575.98px) {
