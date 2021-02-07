@@ -339,7 +339,7 @@ textarea:focus {
     background-image: url('../img/bg_banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -10rem center;
+    background-position: -25rem center;
     background-color: #D6D6D6;
     width: 100%;
     height: auto;
@@ -348,7 +348,7 @@ textarea:focus {
 .banner h1 {
     font-size: 38px;
     font-weight: lighter;
-    padding: 0 27rem 212px 0;
+    padding: 0 28rem 212px 0;
     margin: 0;
 }
 
@@ -500,17 +500,16 @@ textarea:focus {
 }
 
 .store .productDetails .productType {
-    text-transform: uppercase;
+    text-transform: initial;
     color: #868686;
     font-size: 20px;
-    font-weight: bolder;
     margin: 0;
 }
 
 .store .productDetails .productPrice {
     color: #000000;
-    font-size: 22px;
-    font-weight: bolder;
+    font-size: 18px;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -557,6 +556,11 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+
+.login button a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .login .forgot {
@@ -815,6 +819,11 @@ textarea:focus {
     box-sizing: border-box;
 }
 
+.details .detailsSubmit .btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .details .detailsSubmit p {
     font-size: 12px;
     margin: 0;
@@ -962,6 +971,11 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.form-group .btn a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .form-group .btn-black {
@@ -1119,8 +1133,8 @@ textarea:focus {
 
 .form-group .cvv {
     background-image: url(../img/credit-card-cvv.svg);
-    background-position: 8rem center;
-    background-size: 55.6px 38.18px;
+    background-position: 9.2rem center;
+    background-size: 40.13px 27.56px;
     background-repeat: no-repeat;
     margin: 0 0 20px 0;
 }
@@ -1262,7 +1276,7 @@ textarea:focus {
 
 .success .successMessage {
     border-top: 1px solid #2D65AF;
-    padding: 20px 10.5rem 15rem;
+    padding: 20px 1.5rem 15rem;
     font-size: 20px;
     line-height: 25px;
     color: #868686;
@@ -1305,6 +1319,159 @@ textarea:focus {
 /*____ Fim Footer */
 
 
+/*____ PopUp */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.63);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#popupCart .popup {
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 0px;
+    position: relative;
+    text-align: center;
+    top: 50% !important;
+    position: fixed !important;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    left: 0;
+}
+
+#popupCart .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    cursor: pointer;
+    float: right;
+    padding: 0;
+    color: #707070;
+    margin-top: 0;
+    margin-right: 0;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border: 2px solid #707070;
+    border-radius: 100%;
+}
+
+#popupCart .popup .close:hover {
+    color: #213A56;
+    border: 2px solid #213A56;
+}
+
+#popupCart .purchaseCard {
+    border: 1px solid #CBCBCB;
+    padding: 37px 45px 30px;
+}
+
+#popupCart .purchaseCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+#popupCart .purchaseCard li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    padding: 15px 0;
+    border-bottom: 1px dashed #000000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#popupCart .purchaseCard li:last-of-type {
+    border-bottom: none;
+}
+
+#popupCart .purchaseCard li .imgP {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    width: 110px;
+    height: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+#popupCart .purchaseCard li .imgP img {
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+#popupCart .purchaseCard .productP {
+    color: #868686;
+    float: left;
+}
+
+#popupCart .purchaseCard .priceP {
+    float: right;
+}
+
+#popupCart .purchaseCard .total,
+#popupCart .purchaseCard .total .productP {
+    color: #366AAA;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#popupCart .btn {
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    background-color: #213A56;
+    padding: 25px 0;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupCart .btn a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+/*____ Fim PopUp */
+
+
 /*___________ Media Queries ___________*/
 
 @media (max-width: 991.98px) {
@@ -1314,10 +1481,10 @@ textarea:focus {
     }
     .banner {
         padding: 90px 0 0 0;
-        background-position: -2rem center;
+        background-position: 63% center;
     }
     .banner h1 {
-        padding: 0 19rem 130px 0;
+        padding: 0 20rem 130px 0;
         font-size: 22px;
     }
     .searchBar {
@@ -1350,6 +1517,7 @@ textarea:focus {
         text-transform: uppercase;
         border: none;
         border-radius: 0;
+        height: 60px;
     }
     .store {
         padding: 30px 0;
@@ -1417,7 +1585,7 @@ textarea:focus {
     }
     .banner {
         padding: 63px 0 0 0;
-        background-position: -3rem center;
+        background-position: 53% center;
         background-image: url('../img/bg_banner_mobile.jpg');
     }
     .banner h1 {
@@ -1552,7 +1720,6 @@ textarea:focus {
         font-size: 15px;
         padding: 20px;
         width: 100%;
-        height: 60px;
         margin: 0!important;
     }
     .form-group select {
@@ -1585,7 +1752,6 @@ textarea:focus {
         width: 50%;
     }
     .form-group .btn {
-        font-size: 25px;
         height: 60px;
         padding: 15px 0;
         display: flex;
@@ -1636,6 +1802,38 @@ textarea:focus {
         align-items: flex-start;
     }
     .checkout .purchaseCard .delivery .priceP {
+        position: absolute;
+        right: 0;
+        top: 2.5rem;
+    }
+    #popupCart .purchaseCard {
+        padding: 13px 20px 20px 20px;
+        width: 90%;
+    }
+    #popupCart .purchaseCard h3 {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+        text-align: left;
+    }
+    #popupCart .purchaseCard li {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    #popupCart .purchaseCard li .imgP {
+        width: 94px;
+        height: 94px;
+    }
+    #popupCart .purchaseCard .total,
+    #popupCart .purchaseCard .total .productP {
+        font-size: 22px;
+    }
+    #popupCart .purchaseCard .delivery {
+        flex-wrap: wrap;
+        position: relative;
+        align-items: flex-start;
+    }
+    #popupCart .purchaseCard .delivery .priceP {
         position: absolute;
         right: 0;
         top: 2.5rem;

@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="navBuy col-sm-1 no-padding">
-                    <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
+                    <a href="#popupCart" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge">0</span></a>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                     <a href="contact.html">Contato</a>
                 </div>
 
-                <a href="#" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge empty">0</span></a>
+                <a href="#popupCart" class="buyCart"><img src="assets/img/shopping-cart.svg" alt="Carrinho"><span class="badge">0</span></a>
 
             </div>
         </div>
@@ -160,7 +160,7 @@
                                 <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
                             </div>
 
-                            <button type="submit" class="btn btn-blue btn-buy-desk col-sm-11">Finalizar Pedido</button>
+                            <button type="submit" class="btn btn-blue btn-buy-desk col-sm-11"><a href="success.html">Finalizar Pedido</a></button>
                         </div>
 
                         <div class="col-sm-5 purchaseSummary no-padding">
@@ -194,7 +194,7 @@
                                 </ul>
                             </div>
 
-                            <button type="submit" class="btn btn-blue btn-buy-mobile">Finalizar Pedido</button>
+                            <button type="submit" class="btn btn-blue btn-buy-mobile"><a href="success.html">Finalizar Pedido</a></button>
                         </div>
                     </div>
                 </form>
@@ -212,6 +212,43 @@
     </footer>
 
     <div class="footerMargin">&nbsp;</div>
+
+    <div id="popupCart" class="overlay">
+        <div class="popup purchaseCard col-sm-4">
+            <form action="#">
+                <a class="close" href="#">✖</a>
+                <h3>Seu carrinho:</h3>
+
+                <ul>
+                    <li class="delivery">
+                        <div class="imgP"><img src="assets/img/buque_evora.jpg" alt="Buquê Évora"></div>
+                        <span class="productP">Buquê Évora - P</span>
+                        <span class="priceP">R$ 130,90</span>
+                    </li>
+                    <li class="delivery">
+                        <div class="imgP"><img src="assets/img/bombom_ferrero_rocher.png" alt="Ferrero Rocher" class="imgP"></div>
+                        <span class="productP">Ferrero Rocher</span>
+                        <span class="priceP">R$ 39,90</span>
+                    </li>
+                    <li class="delivery">
+                        <div class="imgP"><img src="assets/img/urso_love.png" alt="Urso Love" class="imgP"></div>
+                        <span class="productP">Urso Love</span>
+                        <span class="priceP">R$ 65,00</span>
+                    </li>
+                    <li>
+                        <span class="productP">Entrega</span>
+                        <span class="priceP">R$ 20,00</span>
+                    </li>
+                    <li class="total">
+                        <span class="productP">TOTAL</span>
+                        <span class="priceP">R$ 254,90</span>
+                    </li>
+                </ul>
+
+                <button type="submit" class="btn btn-blue btn-buy-mobile"><a href="success.html">Finalizar Pedido</a></button>
+            </form>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
