@@ -853,7 +853,7 @@ textarea:focus {
 }
 
 .details .tabs-details input[type="radio"]:checked+label {
-    border: 3px solid #2D65AF;
+    border: 3px solid #2D65AF !important;
 }
 
 .details .tabs-details input[type="radio"]:checked+label+.detailPrice {
@@ -1693,7 +1693,7 @@ textarea:focus {
         margin: 4rem 0 12px 0;
     }
     .success .successMessage {
-        padding: 12px 0 5rem 0;
+        padding: 12px 0 15rem 0;
         font-size: 20px;
         line-height: 25px;
     }
