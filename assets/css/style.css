@@ -631,26 +631,14 @@ textarea:focus {
 .details .carousel-indicators li {
     width: 100px;
     height: 100px;
-    background-color: transparent;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border: 1px solid #CBCBCB;
     opacity: 0.5;
     margin-bottom: 10px;
 }
 
-.details .carousel-indicators li:nth-of-type(1) {
-    background-image: url(../img/buque_evora.jpg);
-}
-
-.details .carousel-indicators li:nth-of-type(2) {
-    background-image: url(../img/buque_algarve.jpg);
-}
-
-.details .carousel-indicators li:nth-of-type(3) {
-    background-image: url(../img/buque_bruxelas.jpg);
-    margin-bottom: 0;
+.details .carousel-indicators li img {
+    width: auto;
+    height: 100% !important;
 }
 
 .details .carousel-indicators .active {
