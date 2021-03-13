@@ -41,7 +41,7 @@ textarea:focus {
 }
 
 .mainNav {
-    border-bottom: 1px solid #D6D6D6;
+    border-bottom: 1px solid #d6d6d6;
 }
 
 .mainNav .container {
@@ -60,7 +60,7 @@ textarea:focus {
 
 .navSocial a:hover {
     transition: all 300ms;
-    color: #366AAA;
+    color: #366aaa;
 }
 
 .navTitle {
@@ -172,9 +172,9 @@ textarea:focus {
 }
 
 .buyCart .badge {
-    background-color: #366AAA;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
+    background-color: #366aaa;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     font-size: 10px;
     font-weight: bold;
     line-height: 13px;
@@ -191,7 +191,7 @@ textarea:focus {
 .buyCart .empty {
     background-color: #fff;
     border: 1px solid #868686;
-    color: #3A7A21;
+    color: #3a7a21;
     font-weight: normal;
 }
 
@@ -220,7 +220,7 @@ textarea:focus {
 .hamburguer:before,
 .hamburguer span,
 .hamburguer label {
-    content: " ";
+    content: ' ';
     display: block;
     width: 100%;
     height: 3px;
@@ -340,7 +340,7 @@ textarea:focus {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -25rem center;
-    background-color: #D6D6D6;
+    background-color: #d6d6d6;
     width: 100%;
     height: auto;
 }
@@ -353,7 +353,7 @@ textarea:focus {
 }
 
 .banner h1 strong {
-    color: #2A5283;
+    color: #2a5283;
     font-weight: bold;
 }
 
@@ -373,10 +373,10 @@ textarea:focus {
 }
 
 .searchBar .searchInput {
-    background-color: #FFFFFF;
-    border-top: 1px solid #D6D6D6;
-    border-left: 1px solid #D6D6D6;
-    border-bottom: 2px solid #D6D6D6;
+    background-color: #ffffff;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-bottom: 2px solid #d6d6d6;
     color: #868686;
     padding: 15px 10px 15px 40px;
     font-weight: lighter;
@@ -397,7 +397,7 @@ textarea:focus {
 }
 
 .searchBar .searchInput #city {
-    color: #366AAA;
+    color: #366aaa;
 }
 
 .searchBar .searchInput .searchImg {
@@ -408,7 +408,7 @@ textarea:focus {
 }
 
 .searchBar .searchInput .searchImg img {
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
 }
 
@@ -422,13 +422,13 @@ textarea:focus {
     border: none;
     font-size: 20px;
     color: #000000;
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
     cursor: pointer;
     width: 100%;
 }
 
 .searchBar .btn {
-    background-color: #2A5283;
+    background-color: #2a5283;
     color: #fff;
     font-size: 30px;
     text-transform: uppercase;
@@ -464,6 +464,7 @@ textarea:focus {
 .store .mainTitle strong {
     color: #000000;
     font-weight: normal;
+    display: inline-block;
 }
 
 .store .row {
@@ -532,7 +533,7 @@ textarea:focus {
 }
 
 .login input {
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     color: #868686;
     font-size: 14px;
     border: none;
@@ -572,7 +573,7 @@ textarea:focus {
 }
 
 .login .forgot a {
-    color: #366AAA;
+    color: #366aaa;
     text-decoration: underline;
 }
 
@@ -629,9 +630,9 @@ textarea:focus {
 }
 
 .details .carousel-indicators li {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #CBCBCB;
+    width: 100%;
+    height: auto;
+    border: 1px solid #cbcbcb;
     opacity: 0.5;
     margin-bottom: 10px;
 }
@@ -673,7 +674,7 @@ textarea:focus {
 }
 
 .details .morelink {
-    color: #366AAA;
+    color: #366aaa;
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: bold;
@@ -683,8 +684,8 @@ textarea:focus {
 }
 
 .details .detailsInput {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #D6D6D6;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d6d6d6;
     color: #868686;
     padding: 13px 0 13px 0.3rem;
     font-size: 20px;
@@ -693,6 +694,12 @@ textarea:focus {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+.details .detailsInput select {
+    border: none;
+    padding: 0 0.3rem 0 0;
+    cursor: pointer;
 }
 
 .detailsInput .detailsImg {
@@ -767,13 +774,15 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .details .sizesImg img {
-    width: 70%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .details h5 {
@@ -791,7 +800,7 @@ textarea:focus {
 }
 
 .details .detailsSubmit .btn {
-    background-color: #213A56;
+    background-color: #213a56;
     color: #fff;
     font-size: 25px;
     text-align: center;
@@ -817,7 +826,8 @@ textarea:focus {
     margin: 0;
 }
 
-.details .tabs-details input[type="radio"] {
+.details .tabs-details input[type='radio'],
+.details .tabs-details input[type='checkbox'] {
     display: none;
     cursor: pointer;
 }
@@ -828,7 +838,7 @@ textarea:focus {
     width: 100%;
     height: 128px;
     background-color: #fff;
-    border: 1px solid #CBCBCB;
+    border: 1px solid #cbcbcb;
     transition: all 500ms ease;
     margin: 0 auto;
     display: flex;
@@ -840,11 +850,13 @@ textarea:focus {
     color: #868686 !important;
 }
 
-.details .tabs-details input[type="radio"]:checked+label {
-    border: 3px solid #2D65AF !important;
+.details .tabs-details input[type='radio']:checked+label,
+.details .tabs-details input[type='checkbox']:checked+label {
+    border: 3px solid #2d65af !important;
 }
 
-.details .tabs-details input[type="radio"]:checked+label+.detailPrice {
+.details .tabs-details input[type='radio']:checked+label+.detailPrice,
+.details .tabs-details input[type='checkbox']:checked+label+.detailPrice {
     color: #000000 !important;
 }
 
@@ -902,8 +914,8 @@ textarea:focus {
 
 .form-group input,
 .form-group textarea {
-    background-color: #FFFFFF;
-    border: 1px solid #CBCBCB;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
     color: #868686;
     font-size: 13px;
     padding: 20px;
@@ -924,8 +936,8 @@ textarea:focus {
 }
 
 .form-group select {
-    background-color: #FFFFFF;
-    border: 1px solid #CBCBCB;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
     color: #868686;
     font-size: 13px;
     padding: 10px 20px;
@@ -943,17 +955,17 @@ textarea:focus {
 }
 
 .form-group .formValidation::before {
-    content: '✖';
+    content: 'âœ–';
     margin-right: 5px;
 }
 
 .form-group .btn {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    background-color: #213A56;
+    background-color: #213a56;
     padding: 25px 0;
     height: 65px;
     display: flex;
@@ -963,7 +975,7 @@ textarea:focus {
 
 .form-group .btn a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .form-group .btn-black {
@@ -991,8 +1003,8 @@ textarea:focus {
 }
 
 .delivery .tabs-recipient label {
-    background-color: #FFFFFF;
-    border: 1px solid #CBCBCB;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
     color: #868686;
     text-align: left;
     position: relative;
@@ -1008,7 +1020,7 @@ textarea:focus {
     font-size: 15px;
     text-transform: uppercase;
     -webkit-box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 10%);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 10%);
 }
 
@@ -1018,12 +1030,12 @@ textarea:focus {
 }
 
 .delivery .tabs-recipient input:checked+label {
-    border: 1px solid #5E8ECE;
-    color: #366AAA;
+    border: 1px solid #5e8ece;
+    color: #366aaa;
 }
 
 .delivery .addRecipient {
-    color: #366AAA;
+    color: #366aaa;
     background-color: transparent;
     border: none;
     background-image: url(../img/plus.svg);
@@ -1064,9 +1076,9 @@ textarea:focus {
 }
 
 .registerUser .form-group .btn-outline-blue {
-    background-color: #FFFFFF;
-    border: 2px solid #2D65AF;
-    color: #366AAA;
+    background-color: #ffffff;
+    border: 2px solid #2d65af;
+    color: #366aaa;
     font-size: 20px;
     font-weight: bold;
     text-transform: inherit;
@@ -1090,7 +1102,7 @@ textarea:focus {
 }
 
 .registerUser .form-group .or hr {
-    color: #CBCBCB;
+    color: #cbcbcb;
 }
 
 .contact .form-group .formData h1 {
@@ -1128,9 +1140,9 @@ textarea:focus {
 }
 
 .form-group .btn-card-info {
-    color: #366AAA;
+    color: #366aaa;
     background-color: #fff;
-    border: 2px solid #366AAA;
+    border: 2px solid #366aaa;
     font-size: 30px;
     font-weight: bold;
     border-radius: 100%;
@@ -1152,7 +1164,7 @@ textarea:focus {
 }
 
 .checkout .purchaseCard {
-    border: 1px solid #CBCBCB;
+    border: 1px solid #cbcbcb;
     padding: 37px 45px 30px;
     margin: 27px 0 15px;
 }
@@ -1184,8 +1196,8 @@ textarea:focus {
 }
 
 .checkout .purchaseCard li .imgP {
-    background-color: #FFFFFF;
-    border: 1px solid #CBCBCB;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
     width: 110px;
     height: 111px;
     display: flex;
@@ -1211,7 +1223,7 @@ textarea:focus {
 
 .checkout .purchaseCard .total,
 .checkout .purchaseCard .total .productP {
-    color: #366AAA;
+    color: #366aaa;
     text-transform: uppercase;
     font-size: 18px;
 }
@@ -1257,13 +1269,13 @@ textarea:focus {
 
 .success .title {
     text-transform: uppercase;
-    color: #366AAA;
+    color: #366aaa;
     font-size: 35px;
     margin: 7rem 0 20px 0;
 }
 
 .success .successMessage {
-    border-top: 1px solid #2D65AF;
+    border-top: 1px solid #2d65af;
     padding: 20px 1.5rem 15rem;
     font-size: 20px;
     line-height: 25px;
@@ -1292,10 +1304,10 @@ textarea:focus {
     text-transform: uppercase;
     margin: 0;
     padding: 37px 0 0 0;
-    border-top: 1px solid #D6D6D6;
+    border-top: 1px solid #d6d6d6;
     width: 100%;
     text-align: center;
-    color: #366AAA;
+    color: #366aaa;
     font-size: 14px;
 }
 
@@ -1369,12 +1381,12 @@ textarea:focus {
 }
 
 #popupCart .popup .close:hover {
-    color: #213A56;
-    border: 2px solid #213A56;
+    color: #213a56;
+    border: 2px solid #213a56;
 }
 
 #popupCart .purchaseCard {
-    border: 1px solid #CBCBCB;
+    border: 1px solid #cbcbcb;
     padding: 37px 45px 30px;
 }
 
@@ -1405,8 +1417,8 @@ textarea:focus {
 }
 
 #popupCart .purchaseCard li .imgP {
-    background-color: #FFFFFF;
-    border: 1px solid #CBCBCB;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
     width: 110px;
     height: 111px;
     display: flex;
@@ -1432,18 +1444,18 @@ textarea:focus {
 
 #popupCart .purchaseCard .total,
 #popupCart .purchaseCard .total .productP {
-    color: #366AAA;
+    color: #366aaa;
     text-transform: uppercase;
     font-size: 18px;
 }
 
 #popupCart .btn {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    background-color: #213A56;
+    background-color: #213a56;
     padding: 25px 0;
     height: 65px;
     display: flex;
@@ -1453,7 +1465,7 @@ textarea:focus {
 
 #popupCart .btn a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 
@@ -1498,7 +1510,7 @@ textarea:focus {
         padding: 0 0 0 5px;
     }
     .searchBar .btn {
-        background-color: #2A5283;
+        background-color: #2a5283;
         color: #fff;
         font-size: 25px;
         font-weight: bold;
@@ -1528,6 +1540,9 @@ textarea:focus {
         padding: 20px 0 0 0;
         font-size: 12px;
     }
+    .detailsInput p {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1541,14 +1556,14 @@ textarea:focus {
     }
     .mobileNav {
         display: flex;
-        border-bottom: 1px solid #CBCBCB;
+        border-bottom: 1px solid #cbcbcb;
     }
     .footerNav {
         display: block;
         position: fixed;
         bottom: 0;
         z-index: 9;
-        background-color: #FFFFFF !important;
+        background-color: #ffffff !important;
         -webkit-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
         box-shadow: -3px 0px 3px 0px rgba(0, 0, 0, 0.1);
@@ -1587,7 +1602,7 @@ textarea:focus {
         margin-top: 5px;
     }
     .searchBar .searchInput {
-        border: 1px solid #EBEBEB;
+        border: 1px solid #ebebeb;
         margin: 0 0 10px 0;
         -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
@@ -1604,7 +1619,7 @@ textarea:focus {
         width: 25% !important;
     }
     .store .mainTitle {
-        margin: 0 15px 20px 15px;
+        margin: 0 0 20px 15px;
         text-align: left;
     }
     .store .row,
@@ -1708,7 +1723,7 @@ textarea:focus {
         font-size: 15px;
         padding: 20px;
         width: 100%;
-        margin: 0!important;
+        margin: 0 !important;
     }
     .form-group select {
         font-size: 15px;
@@ -1880,6 +1895,13 @@ textarea:focus {
     }
     .details .detailsArea {
         padding: 0;
+        margin: 0 0.5rem;
+    }
+    .tabs-details {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: flex-start;
+        display: flex;
     }
     .details .more {
         font-size: 14px;
@@ -1902,8 +1924,8 @@ textarea:focus {
         width: 8.33%;
     }
     .details .detailsInput .col-sm-11 {
-        width: 91.66%;
-        padding: 0 0 0 10px;
+        width: 83%;
+        padding: 0;
     }
     .detailsInput .detailsImg img {
         width: 44.77px !important;
@@ -1935,6 +1957,7 @@ textarea:focus {
     .details .w-100 {
         width: 100% !important;
         height: auto !important;
+        display: initial !important;
     }
     .details .carousel-indicators {
         flex-direction: row;
@@ -2006,7 +2029,7 @@ textarea:focus {
         font-size: 18px;
     }
     .detailsInput p {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 20px;
     }
     .detailsInput .detailsImg img {
