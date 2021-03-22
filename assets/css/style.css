@@ -955,7 +955,7 @@ textarea:focus {
 }
 
 .form-group .formValidation::before {
-    content: 'âœ–';
+    content: '⚠';
     margin-right: 5px;
 }
 
