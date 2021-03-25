@@ -911,7 +911,10 @@ textarea:focus {
 .form-group .formRow:last-of-type {
     margin: 0;
 }
-
+.form-group .no-padding-right {
+    padding-right: 0;
+    padding-left: 0.5rem;
+}
 .form-group input,
 .form-group textarea {
     background-color: #ffffff;
@@ -1734,6 +1737,13 @@ textarea:focus {
     }
     .form-group .formRow {
         margin: 0 0 10px 0;
+    }
+    .form-group #inputCity {
+        padding: 0;
+    }
+    .row.tabs-details {
+        width: 100%;
+        margin: 0 auto;
     }
     .form-group textarea {
         height: 140px;
