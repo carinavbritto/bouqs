@@ -1739,7 +1739,7 @@ textarea:focus {
         margin: 0 0 10px 0;
     }
     .form-group #inputCity {
-        padding: 0;
+        padding: 0 !important;
     }
     .row.tabs-details {
         width: 100%;
