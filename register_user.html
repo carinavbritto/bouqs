@@ -143,31 +143,56 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 no-padding formRow">
-                                <h1 class="account">Não tem uma conta?</h1>
-                                <h2>Crie sua conta abaixo:</h2>
-                                <input type="text" name="userName" id="userInp" placeholder="Nome">
-                                <small class="formValidation">Informação inválida. Por favor, digite novamente.</small>
-                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 no-padding formRow">
+                                        <input type="text" name="name" id="name" placeholder="Nome" />
+                                    </div>
 
-                            <div class="col-sm-12 no-padding formRow">
-                                <input type="email" name="email" id="emailInp" placeholder="E-mail">
-                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
-                            </div>
+                                    <div class="col-4 col-md-4 no-padding formRow">
+                                        <input type="tel" name="birthdate" id="birthdate" placeholder="Nascimento" />
+                                    </div>
 
-                            <div class="col-sm-12 no-padding formRow">
-                                <input type="tel" name="cel" id="celInp" placeholder="Celular">
-                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
-                            </div>
+                                    <div class="col-8 col-md-8 no-padding-right formRow">
+                                        <input type="text" name="cpf" id="cpf" placeholder="CPF" />
+                                    </div>
 
-                            <div class="col-sm-12 no-padding formRow">
-                                <input type="text" name="password" id="passInp" placeholder="Senha">
-                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
-                            </div>
+                                    <div class="col-xs-12 col-md-12 no-padding formRow">
+                                        <input type="email" name="email" id="email" placeholder="E-mail" />
+                                    </div>
 
-                            <div class="col-sm-12 no-padding formRow">
-                                <input type="text" name="confirmePass" id="confirmeInp" placeholder="Confirmar senha">
-                                <small class="formValidation hidden">Informação inválida. Por favor, digite novamente.</small>
+                                    <div class="col-xs-12 col-md-12 no-padding formRow">
+                                        <input type="tel" name="cellphone" id="cellphone" placeholder="Celular" />
+                                    </div>
+
+                                    <div class="col-6 col-md-6 no-padding formRow">
+                                        <input type="password" name="password" id="password" placeholder="Senha" />
+                                    </div>
+                                    <div class="col-6 col-md-6 no-padding-right formRow">
+                                        <input type="password" name="confirmation" id="confirmation" placeholder="Confirmar senha" />
+                                    </div>
+                                    <div class="col-4 col-md-3 no-padding formRow">
+                                        <input type="tel" name="cep" id="cep" placeholder="CEP" />
+                                    </div>
+                                    <div class="col-8 col-md-9 no-padding-right formRow">
+                                        <input type="text" readonly name="address" id="address" placeholder="Endereço" />
+                                    </div>
+                                    <div class="col-3 col-md-4 no-padding formRow">
+                                        <input type="tel" name="number" id="number" placeholder="Número" />
+                                    </div>
+                                    <div class="col-9 col-md-8 no-padding-right formRow">
+                                        <input type="text" name="complement" id="complement" placeholder="Complemento" />
+                                    </div>
+                                    <div class="col-md-4 no-padding formRow">
+                                        <input type="tel" readonly name="neighborhood" id="neighborhood" placeholder="Bairro" />
+                                    </div>
+                                    <div class="col-9 col-md-6 no-padding-right formRow" id="inputCity">
+                                        <input type="text" readonly name="city" id="city" placeholder="Cidade" />
+                                    </div>
+                                    <div class="col-3 col-md-2 no-padding-right formRow">
+                                        <input type="text" readonly name="state" id="state" maxlength="2" placeholder="UF" />
+                                    </div>
+                                </div>
                             </div>
 
                             <button type="submit" class="btn btn-black"><a href="login.html">Criar Conta</a></button>
